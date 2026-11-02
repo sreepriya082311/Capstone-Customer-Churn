@@ -1,10 +1,41 @@
+-- =========================================
+-- CAPSTONE 1: CUSTOMER CHURN ANALYSIS
+-- DOMAIN: TELECOMMUNICATIONS
+-- TOOLS: PYTHON, MYSQL, POWER BI
+-- =========================================
+
+-- DATABASE SETUP:
+-- 1. Create the customer churn database.
+-- 2. Import cleaned_customer_churn.csv into MySQL.
+-- 3. Create the table named cleaned_customer_churn.
+-- 4. Verify that 7043 customer records are loaded.
+-- 5. Execute the business queries and views below.
+
+-- NOTE:
+-- The cleaned CSV is generated using Python.
+-- Data cleaning includes handling blank TotalCharges,
+-- duplicate checks, data type conversion and tenure grouping.
+-- The table is imported using MySQL Table Data Import Wizard.
+
 CREATE DATABASE customer_churn_analysis;
-
 USE customer_churn_analysis;
-SHOW TABLES;
-SELECT COUNT(*)
-FROM cleaned_customer_churn;
+-- =========================================
+-- TABLE CREATION AND CSV IMPORT
+-- =========================================
 
+-- The cleaned_customer_churn table is created
+-- by importing cleaned_customer_churn.csv.
+-- Import method: MySQL Workbench Table Data Import Wizard.
+-- Source file: cleaned_customer_churn.csv
+-- Table name: cleaned_customer_churn
+-- Expected records: 7043
+-- Expected columns: 22
+
+-- Verify imported table structure
+DESCRIBE cleaned_customer_churn;
+-- Verify total number of imported records
+SELECT COUNT(*) AS Total_Records
+FROM cleaned_customer_churn;
 SELECT *
 FROM cleaned_customer_churn
 LIMIT 5;
