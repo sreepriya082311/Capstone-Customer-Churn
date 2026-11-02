@@ -1,50 +1,73 @@
 # Customer Churn Analysis
 
 ## Project Overview
-This project analyzes customer churn in the telecommunications industry using Python, MySQL, and Power BI. The goal is to identify customer churn patterns and provide insights that can help improve customer retention.
+Customer Churn Analysis is a data analytics capstone project based on the Telecommunications domain. The project analyses customer data to identify churn patterns and generate business insights that can support customer retention.
 
-## Domain
-Telecommunications
+## Project Objectives
+- Analyse customer churn behaviour.
+- Identify customer segments with higher churn rates.
+- Understand the relationship between churn, tenure, contract type and payment method.
+- Build an interactive Power BI dashboard.
+- Provide data-driven customer retention recommendations.
 
-## Tools Used
-- **Python:** Data cleaning, preprocessing, and exploratory data analysis using Pandas and NumPy.
-- **MySQL:** Data storage, SQL analysis, business queries, and views.
-- **Power BI:** Interactive dashboards, KPI cards, charts, and slicers.
+## Tools & Technologies
+- **Python:** Data cleaning and preprocessing using Pandas and NumPy.
+- **MySQL:** Data storage, SQL queries and views.
+- **Power BI:** Data modelling, DAX measures and interactive dashboards.
 
 ## Dataset
-The project uses the Telco Customer Churn dataset, containing 7,043 customer records and information about customer services, contract types, charges, tenure, and churn status.
+- Dataset: Telco Customer Churn
+- Total Records: 7,043
+- Original Columns: 21
+- Derived Column: TenureGroup
+- Duplicate Records: 0
 
 ## Project Workflow
-1. Load and inspect the raw dataset using Python.
-2. Clean the data and handle missing or blank values.
-3. Perform exploratory data analysis.
-4. Load the cleaned dataset into MySQL.
-5. Execute SQL business queries and create analytical views.
-6. Build an interactive Power BI dashboard.
 
-## Key Findings
-- Total customers analyzed: 7,043
-- Churned customers: 1,869
-- Retained customers: 5,174
-- Overall churn rate: approximately 26.54%
-- Churned customers have a lower average tenure than retained customers.
+1. **Python – Data Cleaning**
+   - Loaded the dataset using Pandas.
+   - Checked missing values and duplicates.
+   - Handled missing TotalCharges values.
+   - Converted data types and checked outliers.
+   - Created TenureGroup categories.
 
-## Power BI Dashboard
-The dashboard includes:
-- Customer overview and KPI cards
-- Churn analysis by contract type
-- Churn analysis by payment method and internet service
-- Tenure group analysis
-- Interactive slicers for exploring customer segments
+2. **MySQL – Data Analysis**
+   - Created the customer_churn_analysis database.
+   - Imported the cleaned customer dataset.
+   - Developed 12 business-focused SQL queries.
+   - Created 10 SQL views for analysis.
 
-## Project Files
-- `customer_churn_analysis.ipynb` — Python analysis notebook
-- `customer_churn_analysis.sql` — SQL queries and views
-- `customer_churn_analysis.pbix` — Power BI dashboard
-- `cleaned_customer_churn.csv` — Cleaned dataset
-- Raw dataset — Original Telco Customer Churn data
-- Project report and presentation
-- Dashboard screenshots
+3. **Power BI – Dashboard Development**
+   - Connected Power BI to the MySQL dataset.
+   - Created a Churn Status calculated column.
+   - Developed DAX measures and KPI cards.
+   - Built two interactive dashboard pages.
+
+## Key Results
+- Total Customers: 7,043
+- Churned Customers: 1,869
+- Retained Customers: 5,174
+- Overall Churn Rate: 26.54%
+- Retention Rate: 73.46%
+- Average Tenure of Churned Customers: 17.98 months
+- Average Tenure of Retained Customers: 37.57 months
+
+## Power BI Dashboard Pages
+1. Customer Churn Overview
+2. Detailed Churn Analysis
+
+## Business Recommendations
+- Focus on customers during their early tenure.
+- Monitor customer segments with higher churn rates.
+- Improve onboarding and customer support.
+- Regularly track churn and retention KPIs.
+
+## Project Deliverables
+- Python Jupyter Notebook (`.ipynb`)
+- MySQL SQL Script (`.sql`)
+- Power BI Dashboard (`.pbix`)
+- Project Report (`.docx`)
+- Dashboard Screenshots (`.png`)
 
 ## Conclusion
-This project demonstrates an end-to-end customer churn analysis workflow using Python, MySQL, and Power BI. The findings can help businesses identify customer segments with higher churn and develop targeted retention strategies.I
+This project demonstrates an end-to-end data analytics workflow using Python, MySQL and Power BI. It transforms raw customer data into meaningful insights that can help businesses understand churn behaviour and improve customer retention.
